@@ -1,0 +1,290 @@
+:root {
+  --basic-black: #000000;
+  --basic-red-light: #fb565a;
+  --basic-red: #e74246;
+  --basic-red-dark: #d7373b;
+  --basic-green-light: #00ca74;
+  --basic-green: #00bc6c;
+  --basic-green-dark: #00aa62;
+  --basic-yellow-light: #efc849;
+  --basic-yellow: #eab534;
+  --basic-yellow-dark: #e5a722;
+  --basic-gray: #e1e1e1;
+  --basic-gray-light: #eeeeee;
+  --basic-gray-dark: #444444;
+  --basic-blue-dark: #283136;
+  --basic-white: #ffffff;
+
+  --special-white: rgba(255, 255, 255, 0.3);
+  --special-black: rgba(0, 0, 0, 0.3);
+  --special-grey-light: #d7dcde;
+  --special-grey: #b4b9bb;
+}
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--basic-blue-dark);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  background-color: var(--basic-red-light);
+  color: var(--basic-white);
+  text-transform: uppercase;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--basic-red);
+}
+
+.button:active {
+  background-color: var(--basic-red-dark);
+  color: var(--special-white);
+}
+
+.main-navigation {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--basic-gray-light);
+  text-transform: uppercase;
+  color: var(--basic-black);
+  border: none;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: var(--basic-red-light);
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+  color: var(--special-black);
+}
+
+.services-slider {
+  background-color: var(--basic-gray-light);
+}
+
+.services-slider-list {
+  list-style: none;
+}
+
+.services-slider-item {
+  text-align: left;
+}
+
+.services-slider-item p:first-child {
+  line-height: 55px;
+  font-size: 55px;
+  color: var(--basic-black);
+}
+
+.slider-buttons-list {
+  list-style: none;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-item {
+  text-align: left;
+}
+
+.services-item h3 {
+  text-transform: uppercase;
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.services-item:nth-child(2) button {
+  background-color: var(--basic-green-light);
+}
+
+.services-item:nth-child(2) button:hover,
+.services-item:nth-child(2) button:focus {
+  background-color: var(--basic-green);
+}
+
+.services-item:nth-child(2) button:active {
+  background-color: var(--basic-green-dark);
+  color: var(--special-white);
+}
+
+.services-item:nth-child(3) button {
+  background-color: var(--basic-yellow-light);
+}
+
+.services-item:nth-child(3) button:hover,
+.services-item:nth-child(3) button:focus {
+  background-color: var(--basic-yellow);
+}
+
+.services-item:nth-child(3) button:active {
+  background-color: var(--basic-yellow-dark);
+  color: var(--special-white);
+}
+
+.about-description p:nth-child(1) {
+  line-height: 45px;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.about-description p:nth-child(3) {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.about-parameters p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-advantages-term {
+  line-height: 64px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.about-advantages-term span {
+  line-height: 40px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.companies-list {
+  list-style: none;
+}
+
+.about-advantages-definition {
+  line-height: 18px;
+}
+
+.companies-item a {
+  opacity: 0.2;
+}
+
+.companies-item a:hover,
+.companies-item a:focus {
+  opacity: 1;
+}
+
+.companies-item a:active {
+  opacity: 0.1;
+}
+
+.footer-contacts p:nth-child(2) {
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-phone {
+  color: inherit;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-social p:nth-child(3) {
+  line-height: 36px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.footer-social p:nth-child(4) {
+  line-height: 22px;
+  font-size: 16px;
+  color: var(--basic-gray-dark);
+}
+
+.social-button {
+  background-color: var(--basic-gray);
+  color: inherit;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-red);
+}
+
+.social-button:active {
+  background-color: var(--basic-red-dark);
+}
+
+.modal-sending {
+  line-height: 18px;
+  font-size: 16px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  background-color: var(--basic-white);
+}
+
+.modal-description {
+  line-height: 53px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.sending-name label,
+.sending-text label,
+.sending-email label {
+  font-weight: 700;
+}
+
+.sending-form input[type="text"],
+.sending-form input[type="email"] {
+  border: 2px solid var(--special-grey-light);
+}
+
+.sending-form input[type="text"]:hover,
+.sending-form input[type="email"]:hover {
+  border: 2px solid var(--special-grey);
+}
+
+.sending-form input[type="text"]:focus,
+.sending-form input[type="email"]:focus {
+  border: 2px solid var(--basic-black);
+}
+
+.sending-form input[type="text"]:invalid,
+.sending-form input[type="email"]:invalid {
+  border: 2px solid var(--basic-red);
+}
