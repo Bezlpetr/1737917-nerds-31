@@ -1,4 +1,5 @@
 :root {
+  --basic-black-light: #4d4d4d;
   --basic-black: #000000;
   --basic-red-light: #fb565a;
   --basic-red: #e74246;
@@ -11,12 +12,19 @@
   --basic-yellow-dark: #e5a722;
   --basic-gray: #e1e1e1;
   --basic-gray-light: #eeeeee;
+  --basic-gray-2: #dfdfdf;
+  --basic-gray-3: #d5d5d5;
+  --basic-gray-4: #666666;
+  --basic-gray-5: #dbdbdb;
   --basic-gray-dark: #444444;
+
   --basic-blue-dark: #283136;
   --basic-white: #ffffff;
 
   --special-white: rgba(255, 255, 255, 0.3);
   --special-black: rgba(0, 0, 0, 0.3);
+  --special-black-dark: rgba(0, 0, 0, 0.6);
+  --special-blue-dark: rgba(40, 49, 54, 0.3);
   --special-grey-light: #d7dcde;
   --special-grey: #b4b9bb;
 }
@@ -91,6 +99,14 @@ img {
 .site-navigation a:active,
 .user-navigation a:active {
   color: var(--special-black);
+}
+
+.page-title {
+  line-height: 55px;
+  font-size: 55px;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--basic-gray-light);
 }
 
 .services-slider {
@@ -208,10 +224,143 @@ img {
   opacity: 0.1;
 }
 
+.filters-form legend {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filters-form ul {
+  list-style: none;
+  line-height: 20px;
+  font-size: 16px;
+  color: var(--basic-blue-dark);
+}
+
+.filters-form label {
+  line-height: 20px;
+  font-size: 16px;
+  color: var(--basic-blue-dark);
+}
+
+.filter-range-text label {
+  line-height: 22px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--basic-blue-dark);
+}
+
+.filter-input {
+  color: var(--basic-black-light);
+  opacity: 0.4;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  opacity: 1;
+}
+
+.filter-input:disabled {
+  opacity: 0.1;
+}
+
+.filter-input:disabled + label {
+  color: var(--special-blue-dark);
+}
+
+.filter-button {
+  background-color: var(--basic-gray-light);
+  color: var(--basic-black);
+  line-height: 18px;
+  font-size: 16px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--basic-gray-2);
+}
+
+.filter-button:active {
+  background-color: var(--basic-gray-3);
+  color: var(--special-black);
+}
+
+.sorting p {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-button {
+  line-height: 18px;
+  font-size: 14px;
+  color: var(--special-black);
+}
+
+.sorting-button:hover,
+.sorting-button:focus {
+  color: var(--special-black-dark);
+}
+
+.sorting-button:active {
+  color: var(--basic-black);
+}
+
+.button-price {
+  color: var(--basic-black);
+}
+
+.templates-list {
+  list-style: none;
+}
+
+.template h3 {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.template p {
+  line-height: 18px;
+  font-size: 16px;
+  color: var(--basic-gray-4);
+}
+
+.pages-list {
+  list-style: none;
+}
+
+.templates-page a {
+  background-color: var(--basic-gray-light);
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.templates-page a:hover,
+.templates-page a:focus {
+  background-color: var(--basic-gray-2);
+}
+
+.templates-page a:active {
+  background-color: var(--basic-gray-3);
+  color: var(--special-black);
+}
+
 .footer-contacts p:nth-child(2) {
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.page-1 {
+  background-color: var(--basic-white);
+  border: 3px solid var(--basic-gray-5);
 }
 
 .footer-phone {
