@@ -177,25 +177,27 @@
       </section>
     </div>
   </footer>
-  <section class="modal-sending">
+  <section class="modal-sending container">
     <h2>Отправка письма</h2>
-    <p class="modal-description">Напишите нам</p>
-    <form class="sending-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="sending-name">
-        <label for="letter-sender-name">Ваше имя:</label>
-        <input type="text" name="sender-name" id="letter-sender-name" placeholder="Имя Фамилия" />
-      </p>
-      <p class="sending-text">
-        <label for="letter-text">Текст письма:</label>
-        <input type="text" name="letter-text" id="letter-text" placeholder="В свободной форме" />
-      </p>
-      <p class="sending-email">
-        <label for="letter-sender-email">Ваш email:</label>
-        <input type="email" name="sender-email" id="letter-sender-email" placeholder="email@example.com" />
-        <button class="button" type="submit">Отправить</button>
-      </p>
-    </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <div class="modal-wrapper">
+      <p class="modal-description">Напишите нам</p>
+      <form class="sending-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="sending-name">
+          <label for="letter-sender-name">Ваше имя:</label>
+          <input type="text" name="sender-name" id="letter-sender-name" placeholder="Имя Фамилия" />
+        </p>
+        <p class="sending-text">
+          <label for="letter-text">Текст письма:</label>
+          <input type="text" name="letter-text" id="letter-text" placeholder="В свободной форме" />
+        </p>
+        <p class="sending-email">
+          <label for="letter-sender-email">Ваш email:</label>
+          <input type="email" name="sender-email" id="letter-sender-email" placeholder="email@example.com" />
+          <button class="button" type="submit">Отправить</button>
+        </p>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </div>
   </section>
 </body>
 
