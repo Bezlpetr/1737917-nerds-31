@@ -112,6 +112,34 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-navigation li {
+  margin-right: 45px;
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-navigation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-navigation a::before {
+  content: "";
+  background-image: url(../img/icon/basket.svg);
+  width: 15px;
+  height: 15px;
+  margin-right: 25px;
 }
 
 .site-navigation a,
@@ -192,6 +220,7 @@ img {
   height: 50px;
   grid-column: 1/2;
   grid-row: 3/5;
+  outline: 1px solid blue;
 }
 
 .promo-buttons-list {
@@ -208,7 +237,7 @@ img {
   grid-row: 3/4;
   z-index: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -228,8 +257,6 @@ img {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   column-gap: 100px;
-  outline: 5px solid rgba(111, 44, 131, 0.3);
-  outline-offset: -5px;
   margin-bottom: 121px;
 }
 
@@ -409,8 +436,9 @@ img {
   margin: 0px;
   padding: 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
+  margin-bottom: 80px;
 }
 
 .companies-item a {
