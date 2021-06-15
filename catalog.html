@@ -104,34 +104,38 @@
         </section>
         <section class="sorting">
           <h2>Сортировка</h2>
-          <p>Сортировать:</p>
-          <ul class="sorting-list">
-            <li>
-              <button class="sorting-button button-price" type="button">
-                по цене
-              </button>
-            </li>
-            <li>
-              <button class="sorting-button button-type" type="button">
-                по типу
-              </button>
-            </li>
-            <li>
-              <button class="sorting-button button-name" type="button">
-                по названию
-              </button>
-            </li>
-            <li>
-              <button class="decrescent-button" type="button">
-                <img src="https://via.placeholder.com/150x100" alt="Сортировка в убывающем порядке" />
-              </button>
-            </li>
-            <li>
-              <button class="progressive-button" type="button">
-                <img src="https://via.placeholder.com/150x100" alt="Сортировка в возрастающем порядке" />
-              </button>
-            </li>
-          </ul>
+          <div class="sorting-wrapper">
+            <p>Сортировать:</p>
+            <ul class="sorting-list">
+              <li>
+                <button class="sorting-button button-price" type="button">
+                  по цене
+                </button>
+              </li>
+              <li>
+                <button class="sorting-button button-type" type="button">
+                  по типу
+                </button>
+              </li>
+              <li>
+                <button class="sorting-button button-name" type="button">
+                  по названию
+                </button>
+              </li>
+              <li>
+                <button class="down-dir-button" type="button">
+                  <img src="img/icon/icon-down-dir.svg" alt="Сортировка в убывающем порядке" width="11"
+                    height="10" />
+                </button>
+              </li>
+              <li>
+                <button class="up-dir-button" type="button">
+                  <img src="img/icon/icon-up-dir.svg" alt="Сортировка в возрастающем порядке" width="11"
+                    height="10" />
+                </button>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="templates">
           <h2>Список шаблонов</h2>
@@ -204,7 +208,7 @@
                   <button class="button template-button" type="button">
                     9900 <span>₽</span>
                   </button>
-                </div>>
+                </div>
                 <img class="template-checked" src="img/catalog/browser.svg" width="360" height="40"
                   alt="Выбран сайт Mishka" />
                 <a class="template-item" href="#"><img src="img/catalog/Mishka.jpg" width="358" height="578"
@@ -228,9 +232,9 @@
             </li>
           </ul>
           <ul class="pages-list">
-            <li class="templates-page page-1"><a>1</a></li>
-            <li class="templates-page page-2"><a href="#">2</a></li>
-            <li class="templates-page page-3"><a href="#">3</a></li>
+            <li class="templates-page page-number page-1"><a>1</a></li>
+            <li class="templates-page page-number page-2"><a href="#">2</a></li>
+            <li class="templates-page page-number page-3"><a href="#">3</a></li>
             <li class="templates-page page-next"><a href="#">Следующая</a></li>
           </ul>
         </section>

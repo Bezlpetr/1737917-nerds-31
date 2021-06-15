@@ -16,6 +16,7 @@
   --basic-gray-3: #d5d5d5;
   --basic-gray-4: #666666;
   --basic-gray-5: #dbdbdb;
+  --basic-gray-6: #a6a6a6;
   --basic-gray-dark: #444444;
 
   --basic-blue-dark: #283136;
@@ -53,6 +54,7 @@
 
 .main-header {
   background-color: var(--basic-gray-light);
+  padding-top: 49px;
 }
 
 a {
@@ -220,7 +222,6 @@ img {
   height: 50px;
   grid-column: 1/2;
   grid-row: 3/5;
-  outline: 1px solid blue;
 }
 
 .promo-buttons-list {
@@ -475,6 +476,10 @@ img {
 }
 
 /*catalog main filters*/
+.filters h2 {
+  margin: 0px;
+}
+
 .filters {
   grid-column: 1/2;
   grid-row: 1/3;
@@ -620,34 +625,71 @@ img {
 }
 
 /*catalog main sorting*/
+.sorting h2 {
+  margin: 0px;
+}
+
 .sorting {
   margin: 0px;
   padding: 0px;
   grid-column: 2/3;
   grid-row: 1/2;
+  margin-bottom: 48px;
 }
 
-/*catalog sorting*/
-.sorting {
-  display: flex;
+.sorting-wrapper {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  column-gap: 40px;
 }
 
-.sorting p {
+.sorting-wrapper p {
   line-height: 30px;
   font-size: 18px;
   font-weight: 700;
+  margin: 0px;
+  text-transform: uppercase;
 }
 
 .sorting-list {
   list-style: none;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sorting-button {
+  padding: 0px;
   line-height: 18px;
   font-size: 14px;
   color: var(--special-black);
+  background-color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+}
+
+.down-dir-button,
+.up-dir-button {
+  margin: 0px;
+  padding: 0px;
+  width: 11px;
+  height: 10px;
+  background-color: var(--basic-white);
+  border: none;
+  border-radius: 0px;
+}
+
+.down-dir-button {
+  margin-left: 40px;
+}
+
+.down-dir-button img {
+  width: 11px;
+  height: 10px;
+  margin: 0px;
 }
 
 .sorting-button:hover,
@@ -664,12 +706,17 @@ img {
 }
 
 /*catalog main templates*/
+.temlates h2 {
+  margin: 0px;
+}
+
 .templates {
   grid-column: 2/3;
   grid-row: 2/3;
 }
 
 .templates-list {
+  grid-row: 1/2;
   margin: 0px;
   padding: 0px;
   list-style: none;
@@ -678,6 +725,7 @@ img {
   grid-template-rows: 620px 620px 620px;
   column-gap: 40px;
   row-gap: 30px;
+  margin-bottom: 54px;
 }
 
 /*.barbershop, .pink-app, .kvast {
@@ -688,6 +736,7 @@ img {
   display: grid;
   grid-template-rows: 40px 347px 231px;
   grid-template-columns: 360px;
+  outline: 1px solid red;
 }
 
 .template-checked {
@@ -769,14 +818,35 @@ img {
 }
 
 .pages-list {
+  padding: 0px;
+  margin: 0px;
   list-style: none;
-}
-
-.templates-page a {
-  background-color: var(--basic-gray-light);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 60px;
   line-height: 18px;
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.templates-page {
+  margin-right: 11px;
+  background-color: var(--basic-gray-light);
+  border-radius: 3px;
+  color: var(--basic-black);
+}
+
+.templates-page a {
+  display: block;
+  padding: 17px 20px 15px 20px;
+}
+
+.page-next a {
+  padding: 17px 77px 15px 78px;
+  text-transform: uppercase;
 }
 
 .templates-page a:hover,
@@ -787,6 +857,7 @@ img {
 .templates-page a:active {
   background-color: var(--basic-gray-3);
   color: var(--special-black);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .page-1 {
