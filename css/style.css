@@ -157,7 +157,7 @@ img {
   position: absolute;
   width: 15px;
   height: 15px;
-  background-image: url(../img/icon/basket.svg);
+  background-image: url("../img/icon/basket.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   top: 7px;
@@ -976,7 +976,7 @@ img {
   position: absolute;
   width: 231px;
   height: 190px;
-  background-image: url(../img/map/map-marker.png);
+  background-image: url("../img/map/map-marker.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   top: 70px;
@@ -1102,6 +1102,7 @@ img {
 .modal-wrapper {
   margin: 0px auto;
   width: 760px;
+  position: relative;
 }
 
 .modal-description {
@@ -1185,4 +1186,47 @@ img {
   border: 2px solid var(--basic-red);
   opacity: 1;
   color: var(--basic-red);
+}
+
+.modal-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  top: 15px;
+  right: -10px;
+  border: none;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  background-color: var(--basic-red-light);
+  opacity: 0.3;
+  top: 8px;
+  right: -5px;
+  border-radius: 1px;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:focus::before,
+.modal-close:focus::after,
+.modal-close:hover::before,
+.modal-close:hover::after {
+  opacity: 1;
+}
+
+.modal-close:active::before,
+.modal-close:active::after {
+  opacity: 0.1;
 }
