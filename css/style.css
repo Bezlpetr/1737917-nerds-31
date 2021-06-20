@@ -1114,7 +1114,7 @@ img {
 
 .sending-form {
   display: grid;
-  grid-template-columns: span(2, 360px);
+  grid-template-columns: 360px 360px;
   grid-template-rows: 114px 179px 112px;
   column-gap: 40px;
 }
