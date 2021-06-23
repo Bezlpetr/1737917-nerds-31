@@ -146,10 +146,6 @@ img {
   margin-bottom: 9px;
 }
 
-.site-navigation li:first-child {
-  margin-left: 45px;
-}
-
 .user-navigation {
   padding-left: 40px;
   position: relative;
@@ -306,7 +302,9 @@ img {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   column-gap: 100px;
-  margin-bottom: 121px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid var(--basic-gray-light);
+  margin-bottom: 39px;
 }
 
 .services-item {
@@ -399,7 +397,7 @@ img {
   line-height: 45px;
   font-size: 45px;
   font-weight: 500;
-  margin-top: 73px;
+  margin-top: 39px;
   margin-bottom: 32px;
   color: var(--basic-black);
 }
