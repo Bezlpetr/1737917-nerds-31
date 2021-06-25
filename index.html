@@ -34,40 +34,44 @@
     <section class="promo">
       <div class="container">
         <h2 class="visually-hidden">Реклама</h2>
-        <div class="promo-slider-wrapper">
-          <ul class="promo-slider-list">
-            <li class="promo-slider-item slide  slide-current">
+        <ul class="promo-slider-list">
+          <li class="promo-slider-item slide-current">
+            <div class="slide-wrapper">
               <p>Долго, дорого,<br>скурпулезно.</p>
               <p>
                 Математически выверенный дизайн<br>для вашего сайта или мобильного
                 приложения
               </p>
               <a class="button promo-button" href="blank.html">Узнать больше</a>
-              <img src="img/slider/nerds-index-slide1.png" alt="" width="760" height="431" />
-            </li>
-            <li class="promo-slider-item slide ">
+            </div>
+            <img src="img/slider/nerds-index-slide1.png" alt="" width="760" height="431" />
+          </li>
+          <li class="promo-slider-item ">
+            <div class="slide-wrapper">
               <p>Любим математику<br>как никто другой</p>
               <p>
                 Никакого креатива, только математические формулы<br>для расчета идеальных пропорций
               </p>
               <a class="button promo-button" href="blank.html">Узнать больше</a>
-              <img src="img/slider/nerds-index-slide2.png" alt="" width="760" height="431" />
-            </li>
-            <li class="promo-slider-item slide ">
+            </div>
+            <img src="img/slider/nerds-index-slide2.png" alt="" width="760" height="431" />
+          </li>
+          <li class="promo-slider-item ">
+            <div class="slide-wrapper">
               <p>Только ночь,<br>только хардкор</p>
               <p>
                 Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.
               </p>
               <a class="button promo-button" href="blank.html">Узнать больше</a>
-              <img src="img/slider/nerds-index-slide3.png" alt="" width="760" height="431" />
-            </li>
-          </ul>
-          <ul class="slider-buttons-list">
-            <li><button class="slider-button current" type="button" aria-label="Первый слайд"></button></li>
-            <li><button class="slider-button " type="button" aria-label="Второй слайд"></button></li>
-            <li><button class="slider-button " type="button" aria-label="Третий слайд"></button></li>
-          </ul>
-        </div>
+            </div>
+            <img src="img/slider/nerds-index-slide3.png" alt="" width="760" height="431" />
+          </li>
+        </ul>
+        <ul class="slider-buttons-list">
+          <li><button class="slider-button current" type="button" aria-label="Первый слайд"></button></li>
+          <li><button class="slider-button " type="button" aria-label="Второй слайд"></button></li>
+          <li><button class="slider-button " type="button" aria-label="Третий слайд"></button></li>
+        </ul>
       </div>
     </section>
     <section class="services container">
@@ -113,12 +117,18 @@
           <img src="img/icon/nerds-logo-about.png" alt="" width="360" height="208" />
           <p>С 2004 года любим точность во всем:</p>
           <dl class="about-advantages-list">
-            <dt class="about-advantages-term term-1">146<span>%</span></dt>
-            <dd class="about-advantages-definition def-1">Уровень самоотдачи</dd>
-            <dt class="about-advantages-term term-2">100<span>%</span></dt>
-            <dd class="about-advantages-definition def-2">Соблюдение сроков</dd>
-            <dt class="about-advantages-term term-3">50<span>%</span></dt>
-            <dd class="about-advantages-definition def-3">Минимальная предоплата</dd>
+            <div>
+              <dt class="about-advantages-term">146<span>%</span></dt>
+              <dd class="about-advantages-definition">Уровень самоотдачи</dd>
+            </div>
+            <div>
+              <dt class="about-advantages-term">100<span>%</span></dt>
+              <dd class="about-advantages-definition">Соблюдение сроков</dd>
+            </div>
+            <div>
+              <dt class="about-advantages-term">50<span>%</span></dt>
+              <dd class="about-advantages-definition">Минимальная предоплата</dd>
+            </div>
           </dl>
         </div>
       </div>
@@ -150,10 +160,8 @@
       <section class="footer-contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
         <p class="footer-contacts-header">Nёrds design studio</p>
-        <div class="address-wrapper">
-          <p>наб. Реки Карповки,<br />5 лит П, Санкт-Петербург</p>
-          <p><a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
-        </div>
+        <p class="footer-contacts-address">наб. Реки Карповки,<br />5 лит П, Санкт-Петербург</p>
+        <p class="footer-contacts-phone"><a href="tel:+78005558628">+7 800 555-86-28</a></p>
         <a class="button" href="#">Напишите нам</a>
       </section>
     </div>
@@ -184,12 +192,14 @@
               </svg>
             </a></li>
         </ul>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="social-description">
+          <p>Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
     </section>
   </footer>
-  <div class="container">
+  <div class="container modal-visible">
     <section class="modal-sending">
       <h2 class="visually-hidden">Отправка письма</h2>
       <div class="modal-wrapper">
@@ -201,7 +211,8 @@
           </p>
           <p class="sending-text">
             <label for="letter-text">Текст письма:</label>
-            <input type="text" name="letter-text" id="letter-text" placeholder="В свободной форме" />
+            <textarea name="letter-text" id="letter-text" cols="30" rows="10"
+              placeholder="В свободной форме"></textarea>
           </p>
           <p class="sending-email">
             <label for="letter-sender-email">Ваш email:</label>
