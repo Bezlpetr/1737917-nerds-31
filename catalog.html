@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Магазин готовых шаблонов</title>
+  <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/normalize.css" />
@@ -14,12 +15,12 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html"><img src="img/icon/nerds-logo-header.png" width="160" height="65"
-            alt="Логотип дизайн студии «Нёрдс»" /></a>
+        <a class="main-header-logo"><img src="img/icon/nerds-logo-header.png" width="160" height="65"
+            alt="Логотип дизайн-студии Нёрдс" /></a>
         <ul class="site-navigation">
           <li><a href="blank.html">Студия</a></li>
           <li><a href="blank.html">Клиенты</a></li>
-          <li class="current-page"><a href="catalog.html">Магазин</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
           <li><a href="blank.html">Контакты</a></li>
         </ul>
         <div class="user-navigation">
@@ -45,10 +46,10 @@
                 <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="price-controls">
-                <label class="price-contols-label">от<input class="min-price" type="number" name="filter-price-min"
+                <label class="price-contols-label">от<input class="min-price" type="text" name="filter-price-min"
                     value="0" /></label>
-                <label class="price-contols-label">до<input class="max-price" type="number" name="filter-price-max"
-                    value="15000" /></label>
+                <label class="price-contols-label">до<input class="max-price" type="text" name="filter-price-max"
+                    value="150 000" /></label>
               </div>
             </fieldset>
             <fieldset class="fieldset-net">
@@ -152,8 +153,7 @@
           <ul class="templates-list">
             <li>
               <section class="template sedona">
-                <a class="template-item" href="#"><img src="img/catalog/Sedona.jpg" width="358" height="578"
-                    alt="Сайт Sedona" /></a>
+                <img class="template-item" src="img/catalog/Sedona.jpg" width="358" height="578" alt="Сайт Sedona" />
                 <div class="template-modal-wrapper">
                   <h3 class="template-header">Sedona</h3>
                   <p class="template-descripion">Информационный сайт<br>для туристов</p>
@@ -166,39 +166,8 @@
               </section>
             </li>
             <li>
-              <section class="template barbershop">
-                <a class="template-item" href="#"><img src="img/catalog/Borodinski.jpg" width="358" height="578"
-                    alt="Сайт Barbershop" /></a>
-                <div class="template-modal-wrapper">
-                  <h3 class="template-header">Barbershop</h3>
-                  <p class="template-descripion">Сайт салона красоты.<br>Для мужчин, Да.</p>
-                  <button class="button template-button" type="button">
-                    9900 <span>₽</span>
-                  </button>
-                </div>
-                <img class="template-checked" src="img/catalog/browser.svg" width="360" height="40"
-                  alt="Выбран сайт Barbershop" />
-              </section>
-            </li>
-            <li>
-              <section class="template a-plus">
-                <a class="template-item" href="#"><img src="img/catalog/A+.jpg" width="358" height="578"
-                    alt="Сайт A Plus" /></a>
-                <div class="template-modal-wrapper">
-                  <h3 class="template-header">A plus</h3>
-                  <p class="template-descripion">Лендинг курсов повышения<br>квалификации</p>
-                  <button class="button template-button" type="button">
-                    9900 <span>₽</span>
-                  </button>
-                </div>
-                <img class="template-checked" src="img/catalog/browser.svg" width="360" height="40"
-                  alt="Выбран сайтA Plus" />
-              </section>
-            </li>
-            <li>
               <section class="template pink-app">
-                <a class="template-item" href="#"><img src="img/catalog/Pink.jpg" width="358" height="578"
-                    alt="Сайт Pink App" /></a>
+                <img class="template-item" src="img/catalog/Pink.jpg" width="358" height="578" alt="Сайт Pink App" />
                 <div class="template-modal-wrapper">
                   <h3 class="template-header">Pink app</h3>
                   <p class="template-descripion">Продуктовый лендинг<br>приложения для iOS и Android</p>
@@ -211,9 +180,23 @@
               </section>
             </li>
             <li>
+              <section class="template barbershop">
+                <img class="template-item" src="img/catalog/Borodinski.jpg" width="358" height="578"
+                  alt="Сайт Barbershop" />
+                <div class="template-modal-wrapper">
+                  <h3 class="template-header">Barbershop</h3>
+                  <p class="template-descripion">Сайт салона красоты.<br>Для мужчин, Да.</p>
+                  <button class="button template-button" type="button">
+                    9900 <span>₽</span>
+                  </button>
+                </div>
+                <img class="template-checked" src="img/catalog/browser.svg" width="360" height="40"
+                  alt="Выбран сайт Barbershop" />
+              </section>
+            </li>
+            <li>
               <section class="template mishka">
-                <a class="template-item" href="#"><img src="img/catalog/Mishka.jpg" width="358" height="578"
-                    alt="Сайт Mishka" /></a>
+                <img class="template-item" src="img/catalog/Mishka.jpg" width="358" height="578" alt="Сайт Mishka" />
                 <div class="template-modal-wrapper">
                   <h3 class="template-header">Mishka</h3>
                   <p class="template-descripion">Интернет-магазин<br>вязанных игрушек</p>
@@ -226,9 +209,22 @@
               </section>
             </li>
             <li>
+              <section class="template a-plus">
+                <img class="template-item" src="img/catalog/A+.jpg" width="358" height="578" alt="Сайт A Plus" />
+                <div class="template-modal-wrapper">
+                  <h3 class="template-header">A plus</h3>
+                  <p class="template-descripion">Лендинг курсов повышения<br>квалификации</p>
+                  <button class="button template-button" type="button">
+                    9900 <span>₽</span>
+                  </button>
+                </div>
+                <img class="template-checked" src="img/catalog/browser.svg" width="360" height="40"
+                  alt="Выбран сайтA Plus" />
+              </section>
+            </li>
+            <li>
               <section class="template kvast">
-                <a class="template-item" href="#"><img src="img/catalog/Kvast.jpg" width="358" height="578"
-                    alt="Сайт Кваст" /></a>
+                <img class="template-item" src="img/catalog/Kvast.jpg" width="358" height="578" alt="Сайт Кваст" />
                 <div class="template-modal-wrapper">
                   <h3 class="template-header">Кваст</h3>
                   <p class="template-descripion">Промо-сайт производителя<br>крафтового кваса</p>
@@ -253,14 +249,13 @@
   </main>
   <footer class="catalog-footer">
     <div class="footer-contacts-wrapper">
-      <img class="footer-map" src="img/map/map.png" width="1440" height="416" alt="Карта с адресом студии Нёрдс" />
+      <img class="footer-map" src="img/map/map.png" width="1440" height="416"
+        alt="Карта офиса студии Нёрдс по адресу Санкт-Петербург, Набережная реки Карповки, 5 литер П" />
       <section class="footer-contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
         <p class="footer-contacts-header">Nёrds design studio</p>
-        <div class="address-wrapper">
-          <p>наб. Реки Карповки,<br />5 лит П, Санкт-Петербург</p>
-          <p><a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
-        </div>
+        <p class="footer-contacts-address">наб. Реки Карповки,<br />5 лит П, Санкт-Петербург</p>
+        <p class="footer-contacts-phone"><a href="tel:+78005558628">+7 800 555-86-28</a></p>
         <a class="button" href="#">Напишите нам</a>
       </section>
     </div>
@@ -291,8 +286,10 @@
               </svg>
             </a></li>
         </ul>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="social-description">
+          <p>Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
     </section>
   </footer>
