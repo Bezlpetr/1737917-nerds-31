@@ -814,7 +814,7 @@ img {
   line-height: 18px;
   font-size: 16px;
   width: 260px;
-  height: 50px;
+  padding: 17px 10px 15px;
 }
 
 .filter-button:hover,
@@ -951,10 +951,11 @@ img {
 
 .template {
   display: grid;
-  grid-template-rows: 40px 347px 231px;
+  grid-template-rows: 40px auto auto;
   grid-template-columns: 360px;
   margin-bottom: 30px;
   border-radius: 5px;
+  min-height: 620px;
 }
 
 .template-checked {
@@ -974,8 +975,11 @@ img {
   grid-row: 2/4;
   grid-column: 1/2;
   width: 360px;
+  height: 578px;
+  object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 5px 5px;
+  background-color: var(--basic-gray-light);
 }
 
 .template-modal-wrapper {
@@ -1003,7 +1007,7 @@ img {
   line-height: 18px;
   font-size: 16px;
   color: var(--basic-gray-4);
-  padding-top: 12px;
+  padding: 12px 50px 0px 50px;
 }
 
 .template-button {
@@ -1053,7 +1057,8 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
   line-height: 18px;
   font-size: 16px;
   font-weight: 500;
@@ -1065,12 +1070,13 @@ img {
   margin-right: 11px;
   background-color: var(--basic-gray-light);
   border-radius: 3px;
-  color: var(--basic-black);
+  margin-bottom: 10px;
 }
 
 .templates-page a {
   display: block;
   padding: 17px 20px 15px 20px;
+  color: var(--basic-black);
 }
 
 .page-next a {
