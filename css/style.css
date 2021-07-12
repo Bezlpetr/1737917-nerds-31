@@ -1126,12 +1126,14 @@ img {
 }*/
 
 .footer-contacts {
+  position: relative;
   display: block;
   margin: 0px;
   padding: 46px 50px 49px 50px;
   box-sizing: border-box;
   width: 319px;
   background-color: var(--basic-white);
+  left: 140px;
 }
 
 .footer-contacts-header {
@@ -1224,9 +1226,9 @@ img {
 }
 
 .modal-sending {
-  position: absolute;
-  right: 97px;
-  bottom: 180px;
+  position: fixed;
+  left: 234px;
+  bottom: 10px;
   line-height: 18px;
   font-size: 16px;
   color: var(--basic-black);
@@ -1237,6 +1239,7 @@ img {
   padding-top: 63px;
   padding-bottom: 84px;
   display: none;
+  z-index: 2;
 }
 
 /*index modal-sending*/
