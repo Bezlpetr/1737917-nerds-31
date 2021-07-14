@@ -71,11 +71,6 @@ img {
   font-style: normal;
   color: var(--basic-blue-dark);
   background-color: var(--basic-white);
-
-  /*min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;*/
 }
 
 .main-header {
@@ -112,7 +107,7 @@ img {
   position: relative;
   width: 1160px;
   margin: 0px auto;
-  padding: 0px;
+  padding: 0px 20px;
 }
 
 /*index header*/
@@ -130,6 +125,16 @@ img {
 .main-header-logo {
   width: 160px;
   height: 65px;
+}
+
+.main-navigation > a:not(.this-page):hover,
+.main-navigation > a:not(.this-page):focus {
+  opacity: 0.7;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.main-navigation > a:not(.this-page):active {
+  opacity: 0.3;
 }
 
 .site-navigation {
@@ -172,15 +177,15 @@ img {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
+.site-navigation a:not(.this-page):hover,
+.site-navigation a:not(.this-page):focus,
+.user-navigation a:not(.this-page):hover,
+.user-navigation a:not(.this-page):focus {
   color: var(--basic-red-light);
 }
 
-.site-navigation a:active,
-.user-navigation a:active {
+.site-navigation a:not(.this-page):active,
+.user-navigation a:not(.this-page):active {
   color: var(--special-black);
 }
 
@@ -313,7 +318,6 @@ img {
 .services-item {
   text-align: left;
   display: grid;
-  /*grid-template-rows: 146px 71px 80px 50px;*/
   grid-template-rows: 146px auto auto auto;
   margin-bottom: 40px;
 }
@@ -825,6 +829,7 @@ img {
 .filter-button:active {
   background-color: var(--basic-gray-3);
   color: var(--special-black);
+  box-shadow: inset 0 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 /*catalog main sorting*/
@@ -896,7 +901,6 @@ img {
 }
 
 .current-dir-button svg > g {
-  fill: var(--basic-black-middle);
   opacity: 1;
 }
 
@@ -911,6 +915,16 @@ img {
 .down-dir-button:hover svg > g,
 .up-dir-button:focus svg > g,
 .down-dir-button:focus svg > g {
+  opacity: 1;
+}
+
+.up-dir-button:active svg > g > path,
+.down-dir-button:active svg > g > path {
+  fill: var(--basic-black-middle);
+}
+
+.up-dir-button:active svg > g,
+.down-dir-button:active svg > g {
   opacity: 1;
 }
 
@@ -959,6 +973,14 @@ img {
   min-height: 620px;
 }
 
+.template a {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 5px 5px;
+}
+
 .template-checked {
   margin: 0px;
   padding: 0px;
@@ -978,21 +1000,20 @@ img {
   width: 360px;
   height: 578px;
   object-fit: cover;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0px 0px 5px 5px;
+
   background-color: var(--basic-gray-light);
 }
 
 .template-modal-wrapper {
-  position: absolute;
-  top: 388px;
-  left: 0px;
+  position: static;
   margin: 0px;
   padding: 0px;
   background-color: var(--basic-gray-light);
   text-align: center;
-  z-index: -1;
   border-radius: 0px 0px 5px 5px;
+  display: none;
+  margin-top: 348px;
+  z-index: 1;
 }
 
 .template-header {
@@ -1025,8 +1046,8 @@ img {
   padding: 0px;
 }
 
-.template:hover > .template-item,
-.template:focus-within > .template-item {
+.template:hover > a,
+.template:focus-within a {
   margin: 0px;
   width: 100%;
   filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25));
@@ -1039,13 +1060,18 @@ img {
 }
 
 .template:hover > .template-modal-wrapper,
-.template-item:focus ~ .template-modal-wrapper {
-  z-index: 1;
+.template>a:focus ~ .template-modal-wrapper {
+  display: block;
 }
 
 .template-modal-wrapper:focus-within {
-  z-index: 1;
+  display: block;
 }
+
+.template-button:focus{
+  display: block;
+}
+
 
 .pages-list {
   padding: 0px;
@@ -1081,12 +1107,13 @@ img {
   text-transform: uppercase;
 }
 
-.templates-page a:hover,
-.templates-page a:focus {
+.pages-list li:not(.current-templates-page):hover,
+.pages-list li:not(.current-templates-page):focus {
   background-color: var(--basic-gray-2);
+  border-radius: 3px;
 }
 
-.templates-page a:active {
+.pages-list li:not(.current-templates-page):active {
   background-color: var(--basic-gray-3);
   color: var(--special-black);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
@@ -1096,12 +1123,12 @@ img {
   background-color: var(--basic-white);
   border: 3px solid var(--basic-gray-5);
   padding: 14px 17px 12px 17px;
+  border-radius: 3px;
 }
 
 /*index/catalog footer*/
 .footer-contacts-wrapper {
   position: relative;
-  width: 1440px;
   margin: 0px auto 58px;
   padding: 54px 0px;
 }
@@ -1111,19 +1138,8 @@ img {
   height: 100%;
   top: 0px;
   left: 0px;
+  width: 100%;
 }
-
-/*.footer-contacts-wrapper::after {
-  content: "";
-  position: absolute;
-  width: 231px;
-  height: 190px;
-  background-image: url("../img/map/map-marker.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  top: 70px;
-  right: 362px;
-}*/
 
 .footer-contacts {
   position: relative;
@@ -1133,7 +1149,6 @@ img {
   box-sizing: border-box;
   width: 319px;
   background-color: var(--basic-white);
-  left: 140px;
 }
 
 .footer-contacts-header {
@@ -1225,36 +1240,40 @@ img {
   opacity: 0.3;
 }
 
-.modal-sending {
+/*index modal-sending*/
+
+.modal-wrapper {
   position: fixed;
-  left: 234px;
-  bottom: 10px;
-  line-height: 18px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-sending {
+  margin: 0px;
+  width: 760px;
+  position: relative;
+
   font-size: 16px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-  background-color: var(--basic-white);
-  width: 960px;
-  padding-top: 63px;
-  padding-bottom: 84px;
+  padding: 63px 100px 84px 100px;
   display: none;
-  z-index: 2;
+  z-index: 3;
 }
 
-/*index modal-sending*/
 .modal-visible {
   display: block;
 }
 
-/*.modal-invisible {
-  display: none;
-}*/
-
-.modal-wrapper {
-  margin: 0px auto;
-  width: 760px;
-  position: relative;
+.wrapper-visible {
+  display: flex;
 }
 
 .modal-description {
@@ -1346,8 +1365,8 @@ img {
   width: 21px;
   height: 21px;
   background-color: transparent;
-  top: 15px;
-  right: -10px;
+  top: 78px;
+  right: 90px;
   border: none;
 }
 
@@ -1407,4 +1426,21 @@ img {
 .modal-error {
   animation-name: shake;
   animation-duration: 0.6s;
+}
+
+/*blank*/
+.blank-body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.blank-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blank-main p {
+  font-size: 40px;
 }
